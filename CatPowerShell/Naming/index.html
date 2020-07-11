@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script>
+	// Hack for scrolling window when linking to anchor tag with fixed nav header
+        var shiftWindow = function() { scrollBy(0, -75) };
+        window.addEventListener("hashchange", shiftWindow);
+        function load() { if (window.location.hash) shiftWindow(); }
+      </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Naming Conventions - CatPnP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/http.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/base.js"></script> 
+    </head>
+
+    <body class="">
+
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<div class="container">
+	<a class="navbar-brand" href="../..">CatPnP</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse">
+          <!-- Main navigation -->
+          <nav class="nav">
+            <ul class="navbar-nav">
+              <li >
+                <a class="nav-link" href="../..">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" role="button" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="nav-dropdown-CatPowerShell">CatPowerShell <b class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="nav-dropdown-CatPowerShell">
+                  
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=4p1l0E5ovUmbHx_UzQlC2R_QqG2HNm9CqBYcit9jIBlUQ1RGUFVMNlEwNlA2NUYzTDVWSlRMT0JHSy4u" class="dropdown-item">Request Access</a>
+                  
+<a href="../Documentation/" class="dropdown-item">Documentation</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+		<i class="fa fa-search"></i> Search
+              </a>
+            </li>
+          </ul>
+	</div>
+	</div>
+      </nav><div id="content" class="container">
+        
+      <div class="row">
+        <div class="col-md-9" role="main">
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    
+    <li class="breadcrumb-item active" aria-current="page">Naming Conventions</li>
+  </ol>
+</nav>
+
+
+<h1 id="naming-conventions">Naming Conventions</h1>
+<p>Please follow the following naming convention for scripts in this repository.</p>
+<h2 id="folders">Folders</h2>
+<p>Folders in this repo act as "categories" or "types" of scripts.  Please make them clear and concise.  Ideally folders should be general enough to describe multiple scripts not just the new script being created.</p>
+<h2 id="integrated-scripts">Integrated Scripts</h2>
+<p>All scripts and functions should follow the below naming convention.</p>
+<pre><code>Cat.{Tech}-{ScriptName}.ps1
+</code></pre>
+
+<p>There is flexibility around both the script name and the technology.  As long as the script name is descriptive enough for people to know what it does. The following technology abbreviations are currently in use.  If you have a new one, please update this documentation.</p>
+<ul>
+<li>PnP - Leverages PnP PowerShell modules.  You may need to update your modules based on the version of SharePoint.</li>
+<li>SP10 - Designed for SharePoint 2010 server powershell modules</li>
+<li>SP13 - Designed for SharePoint 2013 server powershell modules</li>
+<li>SP16 - Designed for SharePoint 2016 server powershell modules</li>
+<li>SP19 - Designed for SharePoint 2019 server powershell modules</li>
+<li>SPO - Designed for SharePoint Online powershell modules</li>
+<li>m365 - This technology is used because the script covers multiple Microsoft cloud modules/technologies. IE Azure, SPO, Teams, Etc.</li>
+<li>AD - Designed for the on premises Active Directory modules</li>
+<li>CM - Designed to work with Content Matrix for migrations</li>
+<li>GIT - Script for common Git commands in GitBash</li>
+<li>PS - General PowerShell scripts</li>
+</ul>
+<h2 id="integrated-functions">Integrated Functions</h2>
+<p>Similar to scripts, functions should follow a very similar naming convention.</p>
+<pre><code>Cat.{tech}-{FunctionName}.psm1
+</code></pre>
+
+<p>Inside the psm1 file functions should follow the below naming convention.  Updating this is in progress to help standardize.</p>
+<pre><code>{Action}-Cat{FunctionName}
+</code></pre>
+
+<p>For categories that have a functions folder there is also a Cat.{Category}Functions.psm1 file that is intended to load all functions from that category.</p>
+<h2 id="stand-alone-scripts">Stand Alone Scripts</h2>
+<p>Stand alone script should follow a similar naming convention when providing to the client.</p>
+<pre><code>{Client}.{Tech}-{ScriptName}.ps1
+</code></pre>
+
+<p>After a script has been provided to the client and before you do a pull request in to the main repo please do a find &amp; replace in the file to replace the client name with "{Client}".  Do the same for the file name to make it more generic for the general repo.</p>
+
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="last-updated-holder displayDate loading">
+    <span class="last-updated-text">Last updated:</span>
+    <time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date"></time>
+  </li>
+<!--
+  <li class="readingTime">
+    2 minutes to read
+  </li>
+-->
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors"></ul>
+  </li>
+</ul>
+</div>
+        <div class="col-md-3"><div class="navbar-light navbar-expand-md hidden-print sticky-top sticky-offset" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    <div id="toc-collapse" class="navbar-collapse collapse card">
+        <ul class="nav flex-column bs-sidenav">
+            <li class="nav-item main"><a class="nav-link" href="#naming-conventions">Naming Conventions</a></li>
+                <li class="nav-item">
+                    <a href="#folders" class="nav-link">Folders</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#integrated-scripts" class="nav-link">Integrated Scripts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#integrated-functions" class="nav-link">Integrated Functions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#stand-alone-scripts" class="nav-link">Stand Alone Scripts</a>
+                </li>
+        </ul>
+    </div>
+</div></div>
+      </div>
+      </div>
+
+      <footer class="col-md-12">
+	<hr>
+	<div class="container">
+	</div>
+      </footer>
+      <script>
+	var base_url = "../..",
+            shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+      </script>
+      <script src="../../js/base.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+      <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="h4 modal-title">Keyboard Shortcuts</p>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
