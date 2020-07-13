@@ -4,5 +4,10 @@ theme:
 nav:
     - Home: index.md
     - CatPowerShell:
+        - Overview: CatPowerShell\Documentation.md
+        - Organization: CatPowerShell\Organization.md
+        - Contribution: CatPowerShell\Contribution.md
+        - 'Client Use': CatPowerShell\ClientUse.md
+        - Naming: CatPowerShell\Naming.md
+        - 'Creating New Script': CatPowerShell\NewScripts.md
         - 'Request Access': 'https://forms.office.com/Pages/ResponsePage.aspx?id=4p1l0E5ovUmbHx_UzQlC2R_QqG2HNm9CqBYcit9jIBlUQ1RGUFVMNlEwNlA2NUYzTDVWSlRMT0JHSy4u'
-        - Documentation: CatPowerShell\Documentation.md
