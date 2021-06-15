@@ -6,9 +6,7 @@ If you have any issues or would like to discuss any major or philosophical chang
 
 ```
 Nick Patterson - Nick.Patterson@catapultsystems.com
-Richard Toland - Richard.Toland@catapultsystems.com
 David Warner - David.Warner@catapultsystems.com
-Nick Brown - Nick.Brown@catapultsystems.com
 ```
 
 Here is some of the documentation for this repository.  If you see any mistakes or have additional details you would like to add, please update as necessary!
