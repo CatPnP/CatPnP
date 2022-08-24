@@ -1,6 +1,6 @@
 site_name: QuisitivePnP
 theme:
-  name: mkdocs
+  name: readthedocs
 nav:
     - Home: index.md
     - CatPowerShell:
