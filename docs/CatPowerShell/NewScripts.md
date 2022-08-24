@@ -1,6 +1,6 @@
 # Creating New Scripts
 
-To help make creating new scripts and functions easier while keeping them consistant 2 script templates have been created that you can copy and paste into the proper category folder for your new script.
+To help make creating new scripts and functions easier while keeping them consistent 2 script templates have been created that you can copy and paste into the proper category folder for your new script.
 
 ```
 Cat.{tech}--{FunctionName}.psm1
